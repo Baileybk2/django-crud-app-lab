@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.views.generic.edit import CreateView
 from .models import Bug
 
 # Create your views here.
@@ -16,3 +17,8 @@ def bug_index(request):
 def bug_detail(request, bug_id):
     bug = Bug.objects.get(id=bug_id)
     return render(request, 'bugs/detail.html', {'bug': bug})
+
+class BugCreate(CreateView):
+    model = Bug
+    fields = '__all__'
+    success_url = '/bugs/'
