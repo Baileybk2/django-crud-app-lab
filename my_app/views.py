@@ -1,7 +1,5 @@
 from django.shortcuts import render
 
-from django.http import HttpResponse
-
 class Bug:
     def __init__(self, commonName, species, description, lifespan):
         self.name = commonName 
@@ -19,7 +17,7 @@ bugs = [
 # Create your views here.
 def home(request):
     # Send a simple HTML response
-    return HttpResponse('<h1>Hello World!</h1>')
+    return render(request, 'home.html')
 
 def about(request): 
     return render(request, 'about.html')

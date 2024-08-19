@@ -1,0 +1,12 @@
+{% extends 'base.html' %} {% load static %} {% block head %}
+<link rel="stylesheet" href="{% static 'css/home.css' %}" />
+{% endblock %} {% block content %}
+
+<section class="logo-container">
+  <div class="bug-container">
+    <img src="{% static 'images/bug.svg' %}" alt="Bug" />
+  </div>
+<h2>A Bug's Life</h2>
+</section>
+
+{% endblock %}
