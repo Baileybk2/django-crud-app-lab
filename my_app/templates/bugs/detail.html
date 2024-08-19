@@ -1,0 +1,15 @@
+{% extends 'base.html' %} {% load static %} {% block head %}
+<link rel="stylesheet" href="{% static 'css/bugs/bug-detail.css' %}" />
+{% endblock %} {% block content %}
+<section class="bug-container">
+  <div class="bug-img">
+    <img src="{% static 'images/bug.svg' %}" alt="A bug" />
+  </div>
+  <div class="bug-details">
+    <h1>{{ bug.name }}</h1>
+    <h2>{{ bug.species }}</h2>
+    <p>{{ bug.description }}</p>
+    <p>Lifespan: {{ bug.lifespan }}</p>
+  </div>
+</section>
+{% endblock %}

@@ -10,15 +10,17 @@
 <section class="card-container">
   {% for bug in bugs %}
   <div class="card">
-    <div class="card-content">
-      <div class="card-img-container">
-        <img src="{% static 'images/bug.svg' %}" alt="Bug" />
+    <a href="{% url 'bug-detail' bug.id %}">
+      <div class="card-content">
+        <div class="card-img-container">
+          <img src="{% static 'images/bug.svg' %}" alt="Bug" />
+        </div>
+        <h2 class="card-title">{{ bug.name }}</h2>
+        <p><small>{{ bug.species }}</small></p>
+        <p><small>{{ bug.description }}</small></p>
+        <p><small>Lifespan: {{ bug.lifespan }} year(s)</small></p>
       </div>
-      <h2 class="card-title">{{ bug.name }}</h2>
-      <p><small>{{ bug.species }}</small></p>
-      <p><small>{{ bug.description }}</small></p>
-      <p><small>Lifespan: {{ bug.lifespan }} year(s)</small></p>
-    </div>
+    </a>
   </div>
   {% endfor %}
 </section>
