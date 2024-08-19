@@ -15,12 +15,9 @@
         <img src="{% static 'images/bug.svg' %}" alt="Bug" />
       </div>
       <h2 class="card-title">{{ bug.name }}</h2>
-      <!-- {% if bug.age > 0 %} -->
-      <!-- <p>A {{ cat.age }} year old {{ cat.breed }}</p>
-      {% else %}
-      <p>A {{ cat.breed }} kitten.</p>
-      {% endif %}
-      <p><small>{{ cat.description }}</small></p> -->
+      <p><small>{{ bug.species }}</small></p>
+      <p><small>{{ bug.description }}</small></p>
+      <p><small>Lifespan: {{ bug.lifespan }} year(s)</small></p>
     </div>
   </div>
   {% endfor %}

@@ -1,8 +1,8 @@
 from django.shortcuts import render
 
 class Bug:
-    def __init__(self, commonName, species, description, lifespan):
-        self.name = commonName 
+    def __init__(self, name, species, description, lifespan):
+        self.name = name
         self.species = species
         self.description = description
         self.lifespan = lifespan 
