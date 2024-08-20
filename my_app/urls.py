@@ -9,4 +9,9 @@ urlpatterns = [
     path('bugs/create/', views.BugCreate.as_view(), name='bug-create'),
     path('bugs/<int:pk>/update/', views.BugUpdate.as_view(), name='bug-update'),
     path('bugs/<int:pk>/delete/', views.BugDelete.as_view(), name='bug-delete'),
+    path(
+        'bugs/<int:bug_id>/add-sighting/', 
+        views.add_sighting, 
+        name='add-sighting'
+    ),
 ]
