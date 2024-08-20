@@ -3,8 +3,11 @@
 {% endblock %} {% block content %}
 
 <div class="page-header">
+  {% if bug %}
+  <h1>Edit {{ bug.name }}</h1>
+  {% else %}
   <h1>Add a Bug</h1>
-  <img src="{% static 'images/bug.svg' %}" alt="Bug" />
+  {% endif %}
 </div>
 
 <form action="" method="post" class="form-container">

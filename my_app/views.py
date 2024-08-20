@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.views.generic.edit import CreateView
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from .models import Bug
 
 # Create your views here.
@@ -21,4 +21,12 @@ def bug_detail(request, bug_id):
 class BugCreate(CreateView):
     model = Bug
     fields = '__all__'
+    success_url = '/bugs/'
+
+class BugUpdate(UpdateView):
+    model = Bug
+    fields = ['species', 'description', 'lifespan']
+
+class BugDelete(DeleteView):
+    model = Bug
     success_url = '/bugs/'

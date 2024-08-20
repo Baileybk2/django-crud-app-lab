@@ -10,6 +10,11 @@
     <h2>{{ bug.species }}</h2>
     <p>{{ bug.description }}</p>
     <p>Lifespan: {{ bug.lifespan }}</p>
+
+    <div class="bug-actions">
+      <a href="{% url 'bug-update' bug.id %}" class="btn warn">Edit</a>
+      <a href="{% url 'bug-delete' bug.id %}" class="btn danger">Delete</a>
+    </div>
   </div>
 </section>
 {% endblock %}
