@@ -14,4 +14,6 @@ urlpatterns = [
         views.add_sighting, 
         name='add-sighting'
     ),
+    path('accounts/signup/', views.signup, name='signup'),
+
 ]
